@@ -1,5 +1,4 @@
-from pathlib import Path
-from config import get_config
+from insight_face.config import get_config
 from data.data_pipe import load_bin, load_mx_rec
 import argparse
 

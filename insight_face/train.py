@@ -1,5 +1,5 @@
-from config import get_config
-from Learner import face_learner
+from insight_face.config import get_config
+from insight_face.Learner import face_learner
 import argparse
 
 # python train.py -net mobilefacenet -b 200 -w 4

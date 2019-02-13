@@ -1,13 +1,10 @@
 import cv2
 import argparse
-from pathlib import Path
-from PIL import Image
-from mtcnn import MTCNN
+from insight_face.mtcnn import MTCNN
 from datetime import datetime
 
 from PIL import Image
 import numpy as np
-from mtcnn_pytorch.src.align_trans import get_reference_facial_points, warp_and_crop_face
 
 parser = argparse.ArgumentParser(description='take a picture')
 parser.add_argument('--name','-n', default='unknown', type=str,help='input the name of the recording person')

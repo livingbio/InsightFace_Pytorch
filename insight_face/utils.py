@@ -7,8 +7,7 @@ import io
 from torchvision import transforms as trans
 from data.data_pipe import de_preprocess
 import torch
-from model import l2_norm
-import pdb
+from insight_face.model import l2_norm
 import cv2
 
 def separate_bn_paras(modules):
