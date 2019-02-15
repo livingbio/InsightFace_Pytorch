@@ -161,9 +161,9 @@ Packaging this project to insight-face-pytorch, so that you can import insight-f
 ### Step
 
 #### 1. Do the setup to create distributions
-    ```bash
-    python setup.py sdist bdist_wheel
-    ```
+```bash
+python setup.py sdist bdist_wheel
+```
 #### 2. Check created distributions
 ```bash
 ls dist/
@@ -171,7 +171,7 @@ ls dist/
 insight_face_pytorch-0.1.dev52+g07dc082.d20190213-py3-none-any.whl  insight-face-pytorch-0.1.dev52+g07dc082.d20190213.tar.gz
 ```
 #### 3. Upload dist/* to repo.
-```
+```bash
 twine upload --repository-url https://pypi-dot-living-bio.appspot.com dist/*
 ```
 #### 4. Install it to check it's available
