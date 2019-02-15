@@ -181,8 +181,8 @@ export PIP_EXTRA_INDEX_URL=https://gliacloud:cookiebank@pypi-dot-living-bio.apps
 pip install insight-face-pytorch
 ```
 #### 5. Sample code
-Face detection: https://github.com/livingbio/face_model/blob/master/face_detection.py
-Face recognition: https://github.com/livingbio/face_model/blob/master/face_recognition.py
+- Face detection: https://github.com/livingbio/face_model/blob/master/face_detection.py
+- Face recognition: https://github.com/livingbio/face_model/blob/master/face_recognition.py
 
 ## PS
 
