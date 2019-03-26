@@ -1,12 +1,10 @@
 import cv2
 from PIL import Image
 import argparse
-from pathlib import Path
-import torch
-from config import get_config
-from mtcnn import MTCNN
-from Learner import face_learner
-from utils import load_facebank, draw_box_name, prepare_facebank
+from insight_face.config import get_config
+from insight_face.mtcnn import MTCNN
+from insight_face.Learner import face_learner
+from insight_face.utils import load_facebank, draw_box_name, prepare_facebank
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='for face verification')

@@ -155,6 +155,35 @@ python train.py -b [batch_size] -lr [learning rate] -e [epochs]
 
 - This repo is mainly inspired by [deepinsight/insightface](https://github.com/deepinsight/insightface) and [InsightFace_TF](https://github.com/auroua/InsightFace_TF)
 
+## 5. Packaging (mainly for inference)
+Packaging this project to insight-face-pytorch, so that you can import insight-face-pytorch to do inference in other projects, e.g. https://github.com/livingbio/face_model
+
+### Step
+
+#### 1. Do the setup to create distributions
+```bash
+python setup.py sdist bdist_wheel
+```
+#### 2. Check created distributions
+```bash
+ls dist/
+
+insight_face_pytorch-0.1.dev52+g07dc082.d20190213-py3-none-any.whl  insight-face-pytorch-0.1.dev52+g07dc082.d20190213.tar.gz
+```
+#### 3. Upload dist/* to repo.
+```bash
+twine upload --repository-url https://pypi-dot-living-bio.appspot.com dist/*
+```
+#### 4. Install it to check it's available
+```bash
+export PIP_EXTRA_INDEX_URL=https://gliacloud:cookiebank@pypi-dot-living-bio.appspot.com/pypi
+
+pip install insight-face-pytorch
+```
+#### 5. Sample code
+- Face detection: https://github.com/livingbio/face_model/blob/master/face_detection.py
+- Face recognition: https://github.com/livingbio/face_model/blob/master/face_recognition.py
+
 ## PS
 
 - PRs are welcome, in case that I don't have the resource to train some large models like the 100 and 151 layers model

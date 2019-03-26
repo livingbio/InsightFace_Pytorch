@@ -1,6 +1,6 @@
-from data.data_pipe import de_preprocess, get_train_loader, get_val_data
-from model import Backbone, Arcface, MobileFaceNet, Am_softmax, l2_norm
-from verifacation import evaluate
+from data.data_pipe import get_train_loader, get_val_data
+from insight_face.model import Backbone, Arcface, MobileFaceNet, l2_norm
+from insight_face.verifacation import evaluate
 import torch
 from torch import optim
 import numpy as np
@@ -8,11 +8,11 @@ from tqdm import tqdm
 from tensorboardX import SummaryWriter
 from matplotlib import pyplot as plt
 plt.switch_backend('agg')
-from utils import get_time, gen_plot, hflip_batch, separate_bn_paras
+from insight_face.utils import get_time, gen_plot, hflip_batch, separate_bn_paras
 from PIL import Image
 from torchvision import transforms as trans
 import math
-import bcolz
+
 
 class face_learner(object):
     def __init__(self, conf, inference=False):
